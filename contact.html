@@ -402,7 +402,7 @@
         </div>
       </div>
       <div class="footer-divider"></div>
-      <div class="footer-copy">© 2024 BFF Studio. All rights reserved. Built with ❤️ for our clients.</div>
+      <div class="footer-copy">© 2025 BFF Studio. All rights reserved. Built with ❤️ for our clients.</div>
     </div>
   </footer>
 
@@ -424,7 +424,28 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-
+    // Contact form validation
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        const name = document.querySelector('input[name="name"]')?.value.trim();
+        const email = document.querySelector('input[name="email"]')?.value.trim();
+        const message = document.querySelector('textarea[name="message"]')?.value.trim();
+        
+        if (!name || !email || !message) {
+          e.preventDefault();
+          alert('Please fill in all fields.');
+          return;
+        }
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          e.preventDefault();
+          alert('Please enter a valid email address.');
+          return;
+        }
+      });
+    }
   </script>
 </body>
 </html>

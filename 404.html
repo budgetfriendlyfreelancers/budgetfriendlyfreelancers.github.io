@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found — Budget Friendly Freelancer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --teal:       #1D9E75;
+      --teal-dark:  #085041;
+      --teal-light: #E1F5EE;
+      --navy:       #0D1B2A;
+      --lime:       #4ade80;
+      --gold:       #BA7517;
+      --muted:      #6c757d;
+      --off-white:  #F8FBFA;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fff;
+      color: var(--navy);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .brand {
+      font-family: 'Syne', sans-serif;
+    }
+
+    .navbar {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e8f5f0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--navy) !important;
+      letter-spacing: -.02em;
+    }
+
+    .navbar-brand span { color: var(--teal); }
+
+    .nav-link {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--navy) !important;
+      padding: .5rem 1rem !important;
+      transition: color .2s;
+    }
+
+    .nav-link:hover { color: var(--teal) !important; }
+
+    .nav-cta {
+      background: var(--teal);
+      color: #fff !important;
+      border-radius: 50px;
+      padding: .45rem 1.2rem !important;
+      transition: background .2s, transform .15s;
+    }
+
+    .nav-cta:hover { background: var(--teal-dark) !important; transform: translateY(-1px); }
+
+    .error-section {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .error-container {
+      max-width: 600px;
+    }
+
+    .error-code {
+      font-family: 'Syne', sans-serif;
+      font-size: 8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .error-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      letter-spacing: -.02em;
+    }
+
+    .error-message {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .error-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-hero-primary {
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: .75rem 1.75rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .2s, transform .15s;
+    }
+
+    .btn-hero-primary:hover { background: var(--teal-dark); transform: translateY(-2px); color: #fff; }
+
+    .btn-hero-ghost {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      border-radius: 50px;
+      padding: .6rem 1.5rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color .2s, color .2s, transform .15s;
+    }
+
+    .btn-hero-ghost:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-2px); }
+
+    footer {
+      background: var(--navy);
+      color: #9ab8c2;
+      padding: 3rem 0 2rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    footer .brand-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    footer .brand-name span { color: var(--teal); }
+
+    footer a {
+      color: #9ab8c2;
+      text-decoration: none;
+      font-size: .9rem;
+      display: block;
+      margin-bottom: .5rem;
+      transition: color .2s;
+    }
+
+    footer a:hover { color: var(--lime); }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.15);
+      color: #9ab8c2;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background .2s, color .2s;
+    }
+
+    .footer-social a:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+    .footer-divider { border-color: rgba(255,255,255,.08); margin: 2rem 0 1.5rem; }
+    .footer-copy { font-size: .82rem; color: rgba(255,255,255,.35); }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">BFF <span>Studio</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link nav-cta" href="contact.html">Get a Free Quote <i class="bi bi-arrow-right"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ERROR SECTION -->
+  <section class="error-section">
+    <div class="container">
+      <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Oops! Page not found</h1>
+        <p class="error-message">The page you're looking for doesn't exist or has been moved. But don't worry — we'll help you get back on track!</p>
+        <div class="error-buttons">
+          <a href="index.html" class="btn-hero-primary">Go to Home <i class="bi bi-arrow-right"></i></a>
+          <a href="contact.html" class="btn-hero-ghost">Get help <i class="bi bi-question-circle"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="brand-name mb-2">BFF <span>Studio</span></div>
+          <p style="font-size:.9rem;line-height:1.7;max-width:260px;">Budget Friendly Freelancer — building websites that you truly own.</p>
+          <div class="footer-social d-flex gap-2 mt-3">
+            <a href="https://wa.me/8489465176" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-2">
+          <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:.75rem;">Pages</div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:.75rem;">Legal</div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="col-lg-2">
+          <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:.75rem;">Contact</div>
+          <a href="mailto:webdevbff1@gmail.com">webdevbff1@gmail.com</a>
+          <a href="https://wa.me/8489465176" target="_blank">WhatsApp us</a>
+        </div>
+      </div>
+      <hr class="footer-divider"/>
+      <div class="d-flex justify-content-between flex-wrap gap-2">
+        <span class="footer-copy">© 2025 Budget Friendly Freelancer. All rights reserved.</span>
+        <span class="footer-copy">Made with ♥ by BFF Studio</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/8489465176" class="wa-float" target="_blank" title="Chat on WhatsApp">
+    <i class="bi bi-whatsapp" style="position: fixed; bottom: 24px; right: 24px; width: 54px; height: 54px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 9999; box-shadow: 0 4px 16px rgba(37,211,102,.4); text-decoration: none; transition: transform .2s; animation: wa-pulse 2.5s infinite; font-size: 1.6rem; color: #fff;"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
