@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us — Budget Friendly Freelancer</title>
+  <title>Services — Budget Friendly Freelancer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -93,103 +93,74 @@
       padding: 4rem 0;
     }
 
-    /* ── CONTACT FORM ── */
-    .contact-container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 1.75rem;
-    }
-
-    .form-label {
-      font-weight: 600;
-      font-size: .95rem;
-      color: var(--navy);
+    .section-eyebrow {
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--teal);
       margin-bottom: .75rem;
-      display: block;
     }
 
-    .form-control {
-      background: var(--off-white);
-      border: 1px solid #e4f0eb;
-      border-radius: 12px;
-      padding: .85rem 1.25rem;
-      font-size: .95rem;
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 800;
       color: var(--navy);
-      transition: border-color .2s, background .2s;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -.02em;
     }
 
-    .form-control:focus {
-      background: #fff;
-      border-color: var(--teal);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(29,158,117,.1);
-    }
-
-    .form-control::placeholder {
-      color: var(--muted);
-    }
-
-    textarea.form-control {
-      resize: vertical;
-      min-height: 140px;
-    }
-
-    .btn-submit {
-      background: var(--teal);
-      color: #fff;
-      border: none;
-      border-radius: 50px;
-      padding: 1rem 2.5rem;
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
+    .section-sub {
       font-size: 1rem;
-      cursor: pointer;
-      transition: background .2s, transform .15s;
-      width: 100%;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
     }
 
-    .btn-submit:hover {
-      background: var(--teal-dark);
-      transform: translateY(-2px);
+    /* ── SERVICE CARD ── */
+    .service-card {
+      background: #fff;
+      border: 1px solid #e4f0eb;
+      border-radius: 16px;
+      padding: 2rem;
+      height: 100%;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
     }
 
-    /* ── CONTACT OPTIONS ── */
-    .contact-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 4rem;
-      padding-top: 4rem;
-      border-top: 2px solid #e4f0eb;
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(29,158,117,.12);
+      border-color: var(--teal);
     }
 
-    .contact-option {
-      text-align: center;
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      background: var(--teal-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .contact-option-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-option h4 {
-      font-size: 1.1rem;
+    .service-card h3 {
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--navy);
-      margin-bottom: .5rem;
-    }
-
-    .contact-option p {
-      font-size: .9rem;
-      color: var(--muted);
       margin-bottom: 1rem;
-      line-height: 1.6;
     }
 
-    .contact-option a {
+    .service-card p {
+      font-size: .95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card a {
       color: var(--teal);
       font-weight: 600;
       text-decoration: none;
@@ -199,39 +170,37 @@
       transition: gap .2s;
     }
 
-    .contact-option a:hover { gap: 10px; }
-
-    /* ── SOCIAL LINKS ── */
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 3rem;
-    }
-
-    .social-links a {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--off-white);
-      border: 2px solid #e4f0eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--navy);
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background .2s, border-color .2s, color .2s;
-    }
-
-    .social-links a:hover {
-      background: var(--teal);
-      border-color: var(--teal);
-      color: #fff;
-    }
+    .service-card a:hover { gap: 10px; }
 
     /* ── BACKGROUND SECTIONS ── */
     .bg-light { background: var(--off-white); }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+      padding: 4.5rem 0;
+      text-align: center;
+    }
+
+    .cta-banner h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; color: #fff; letter-spacing: -.02em; margin-bottom: 1.5rem; }
+
+    .btn-cta-white {
+      background: #fff;
+      color: var(--teal-dark);
+      border: none;
+      border-radius: 50px;
+      padding: .85rem 2.25rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .15s, box-shadow .15s;
+    }
+
+    .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); color: var(--teal-dark); }
 
     /* ── FOOTER ── */
     footer {
@@ -280,24 +249,6 @@
     /* ── FADE-IN ANIMATION ── */
     .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-    .reply-time-note {
-      background: var(--teal-light);
-      border: 1px solid #9FE1CB;
-      border-radius: 12px;
-      padding: 1rem;
-      margin-top: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: .95rem;
-      color: var(--teal-dark);
-    }
-
-    .reply-time-note i {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-    }
   </style>
 </head>
 <body>
@@ -324,49 +275,116 @@
   <!-- PAGE HEADER -->
   <section class="page-header fade-up">
     <div class="container">
-      <h1>Get In Touch</h1>
-      <p>Have a question? Ready to start your project? We'd love to hear from you.</p>
+      <h1>Our Services</h1>
+      <p>We offer a complete range of web solutions designed to help your business grow online.</p>
     </div>
   </section>
 
-  <!-- CONTACT FORM & OPTIONS -->
+  <!-- SERVICES GRID -->
   <section class="bg-light">
-    <div class="container">
-      <div class="contact-container fade-up">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJp3DzH0PhcbhVmd32JXZuamQrLd9H8XwXe9Ppw3wrDCK3Ow/viewform?embedded=true" width="100%" height="959" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 12px; overflow: hidden;">Loading…</iframe>
-
-        <div class="reply-time-note">
-          <i class="bi bi-clock-history"></i>
-          <span><strong>We reply within 24 hours.</strong> Usually much faster on weekdays.</span>
-        </div>
-
-        <!-- Alternative Contact Methods -->
-        <div class="contact-options">
-          <div class="contact-option fade-up">
-            <div class="contact-option-icon">💬</div>
-            <h4>WhatsApp</h4>
-            <p>Prefer quick chat? Message us on WhatsApp and we'll get back to you right away.</p>
-            <a href="https://wa.me/8489465176" target="_blank">Chat now <i class="bi bi-arrow-right"></i></a>
-          </div>
-
-          <div class="contact-option fade-up" style="transition-delay:.1s">
-            <div class="contact-option-icon">✉️</div>
-            <h4>Email</h4>
-            <p>Email us directly with details about your project and we'll send you a detailed response.</p>
-            <a href="mailto:webdevbff1@gmail.com">webdevbff1@gmail.com <i class="bi bi-arrow-right"></i></a>
+    <div class="container fade-up">
+      <div class="row g-4">
+        <!-- Website Creation -->
+        <div class="col-lg-6 fade-up">
+          <div class="service-card">
+            <div class="service-icon">🏗️</div>
+            <h3>Website Creation</h3>
+            <p>Fresh builds for startups, NGOs, artists, and small businesses. Fast, clean, mobile-ready websites that look great and load faster than your competition.</p>
+            <a href="contact.html">Request a quote <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- Social Links -->
-        <div class="fade-up" style="transition-delay:.3s">
-          <div style="text-align:center; margin-top:4rem; padding-top:4rem; border-top:2px solid #e4f0eb;">
-            <p style="color:var(--muted); margin-bottom:1.5rem; font-size:.95rem;">Follow us for updates and web design tips</p>
-            <div class="social-links">
-              <a href="https://wa.me/8489465176" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            </div>
+        <!-- Redesign -->
+        <div class="col-lg-6 fade-up" style="transition-delay:.1s">
+          <div class="service-card">
+            <div class="service-icon">✨</div>
+            <h3>Website Redesign</h3>
+            <p>Transform an outdated or underperforming site into a modern, high-converting powerhouse. We'll modernize your design, improve speed, and fix broken user flows.</p>
+            <a href="contact.html">Request a quote <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Ecommerce & Payments -->
+        <div class="col-lg-6 fade-up" style="transition-delay:.2s">
+          <div class="service-card">
+            <div class="service-icon">🛒</div>
+            <h3>Ecommerce & Payments</h3>
+            <p>Online store setup with secure payment gateway integration. We handle Stripe, PayPal, Razorpay, and other payment processors so your customers can buy with confidence.</p>
+            <a href="contact.html">Request a quote <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- SEO & AEO -->
+        <div class="col-lg-6 fade-up" style="transition-delay:.3s">
+          <div class="service-card">
+            <div class="service-icon">🔍</div>
+            <h3>SEO & AEO</h3>
+            <p>Rank on Google and get found by AI search engines too. We optimize your content, structure, and metadata so you show up when people search for your services.</p>
+            <a href="contact.html">Request a quote <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Mobile-First Design -->
+        <div class="col-lg-6 fade-up" style="transition-delay:.4s">
+          <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Mobile-First Design</h3>
+            <p>Every site we build looks and works perfectly on any screen size. We design mobile first, then enhance for tablets and desktops — not the other way around.</p>
+            <a href="contact.html">Request a quote <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Maintenance & Support -->
+        <div class="col-lg-6 fade-up" style="transition-delay:.5s">
+          <div class="service-card">
+            <div class="service-icon">🛠️</div>
+            <h3>Maintenance & Support</h3>
+            <p>Updates, fixes, security patches, and ongoing care. We keep your site running smoothly, secure, and fast — so it never goes stale or vulnerable.</p>
+            <a href="contact.html">Request a quote <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <div class="container">
+      <div class="text-center mb-5 fade-up">
+        <div class="section-eyebrow">Why work with us</div>
+        <h2 class="section-title">What sets us apart</h2>
+      </div>
+      <div class="row g-4 fade-up">
+        <div class="col-md-4">
+          <div style="text-align:center;">
+            <div style="font-size:3rem;margin-bottom:1rem;">🔓</div>
+            <h4 style="font-weight:700; margin-bottom:.5rem;">100% Ownership</h4>
+            <p style="color:var(--muted);">Your domain, hosting, and admin panel are yours. We never hold anything hostage.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="text-align:center;">
+            <div style="font-size:3rem;margin-bottom:1rem;">💰</div>
+            <h4 style="font-weight:700; margin-bottom:.5rem;">Fair Pricing</h4>
+            <p style="color:var(--muted);">No hidden fees, no surprises. You pay for what you get — nothing more.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="text-align:center;">
+            <div style="font-size:3rem;margin-bottom:1rem;">⚡</div>
+            <h4 style="font-weight:700; margin-bottom:.5rem;">Fast Delivery</h4>
+            <p style="color:var(--muted);">Most projects completed in 2–4 weeks. Quick turnaround without sacrificing quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to transform your online presence?</h2>
+      <a href="contact.html" class="btn-cta-white">Request a quote <i class="bi bi-arrow-right"></i></a>
     </div>
   </section>
 
@@ -423,8 +441,6 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-
   </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us — Budget Friendly Freelancer</title>
+  <title>About Us — Budget Friendly Freelancer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -93,145 +93,189 @@
       padding: 4rem 0;
     }
 
-    /* ── CONTACT FORM ── */
-    .contact-container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 1.75rem;
-    }
-
-    .form-label {
-      font-weight: 600;
-      font-size: .95rem;
-      color: var(--navy);
-      margin-bottom: .75rem;
-      display: block;
-    }
-
-    .form-control {
-      background: var(--off-white);
-      border: 1px solid #e4f0eb;
-      border-radius: 12px;
-      padding: .85rem 1.25rem;
-      font-size: .95rem;
-      color: var(--navy);
-      transition: border-color .2s, background .2s;
-    }
-
-    .form-control:focus {
-      background: #fff;
-      border-color: var(--teal);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(29,158,117,.1);
-    }
-
-    .form-control::placeholder {
-      color: var(--muted);
-    }
-
-    textarea.form-control {
-      resize: vertical;
-      min-height: 140px;
-    }
-
-    .btn-submit {
-      background: var(--teal);
-      color: #fff;
-      border: none;
-      border-radius: 50px;
-      padding: 1rem 2.5rem;
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background .2s, transform .15s;
-      width: 100%;
-    }
-
-    .btn-submit:hover {
-      background: var(--teal-dark);
-      transform: translateY(-2px);
-    }
-
-    /* ── CONTACT OPTIONS ── */
-    .contact-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 4rem;
-      padding-top: 4rem;
-      border-top: 2px solid #e4f0eb;
-    }
-
-    .contact-option {
-      text-align: center;
-    }
-
-    .contact-option-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-option h4 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: .5rem;
-    }
-
-    .contact-option p {
-      font-size: .9rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .contact-option a {
+    .section-eyebrow {
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
       color: var(--teal);
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap .2s;
+      margin-bottom: .75rem;
     }
 
-    .contact-option a:hover { gap: 10px; }
-
-    /* ── SOCIAL LINKS ── */
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 3rem;
-    }
-
-    .social-links a {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--off-white);
-      border: 2px solid #e4f0eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 800;
       color: var(--navy);
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background .2s, border-color .2s, color .2s;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -.02em;
     }
 
-    .social-links a:hover {
-      background: var(--teal);
-      border-color: var(--teal);
-      color: #fff;
+    .section-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.7;
     }
 
     /* ── BACKGROUND SECTIONS ── */
     .bg-light { background: var(--off-white); }
+    .bg-dark { background: var(--navy); }
+    .bg-dark .section-title { color: #fff; }
+    .bg-dark .section-eyebrow { color: var(--lime); }
+    .bg-dark p { color: #9ab8c2; }
+
+    /* ── MISSION GRID ── */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .mission-card {
+      background: #fff;
+      border: 1px solid #e4f0eb;
+      border-radius: 12px;
+      padding: 1.75rem;
+      text-align: center;
+    }
+
+    .bg-dark .mission-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .mission-card .label {
+      font-size: .78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--teal);
+      margin-bottom: .5rem;
+    }
+
+    .bg-dark .mission-card .label { color: var(--lime); }
+
+    .mission-card .value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+
+    .bg-dark .mission-card .value { color: #fff; }
+
+    /* ── TEAM GRID ── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      background: var(--teal-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin: 0 auto 1rem;
+      border: 2px solid #fff;
+      box-shadow: 0 4px 12px rgba(29,158,117,.15);
+    }
+
+    .team-member h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .25rem;
+    }
+
+    .team-member .role {
+      font-size: .9rem;
+      color: var(--muted);
+      margin-bottom: .75rem;
+    }
+
+    .team-member p {
+      font-size: .9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testi-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px;
+      padding: 1.75rem;
+      height: 100%;
+    }
+
+    .stars { color: #FBBF24; font-size: .85rem; margin-bottom: 1rem; letter-spacing: 2px; }
+
+    .testi-quote {
+      font-size: .95rem;
+      color: #cde;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+
+    .testi-client { display: flex; align-items: center; gap: 12px; }
+
+    .testi-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+
+    .testi-name { font-weight: 600; color: #fff; font-size: .9rem; }
+    .testi-type { font-size: .78rem; color: #9ab8c2; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+      padding: 4.5rem 0;
+      text-align: center;
+    }
+
+    .cta-banner h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; color: #fff; letter-spacing: -.02em; margin-bottom: 1.5rem; }
+
+    .btn-cta-white {
+      background: #fff;
+      color: var(--teal-dark);
+      border: none;
+      border-radius: 50px;
+      padding: .85rem 2.25rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .15s, box-shadow .15s;
+    }
+
+    .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); color: var(--teal-dark); }
 
     /* ── FOOTER ── */
     footer {
@@ -280,24 +324,6 @@
     /* ── FADE-IN ANIMATION ── */
     .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-    .reply-time-note {
-      background: var(--teal-light);
-      border: 1px solid #9FE1CB;
-      border-radius: 12px;
-      padding: 1rem;
-      margin-top: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: .95rem;
-      color: var(--teal-dark);
-    }
-
-    .reply-time-note i {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-    }
   </style>
 </head>
 <body>
@@ -324,49 +350,91 @@
   <!-- PAGE HEADER -->
   <section class="page-header fade-up">
     <div class="container">
-      <h1>Get In Touch</h1>
-      <p>Have a question? Ready to start your project? We'd love to hear from you.</p>
+      <h1>About BFF Studio</h1>
+      <p>We're a small collective of web professionals dedicated to building affordable, beautiful websites for small businesses, NGOs, and creatives.</p>
     </div>
   </section>
 
-  <!-- CONTACT FORM & OPTIONS -->
+  <!-- WHO WE ARE -->
   <section class="bg-light">
-    <div class="container">
-      <div class="contact-container fade-up">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJp3DzH0PhcbhVmd32JXZuamQrLd9H8XwXe9Ppw3wrDCK3Ow/viewform?embedded=true" width="100%" height="959" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 12px; overflow: hidden;">Loading…</iframe>
-
-        <div class="reply-time-note">
-          <i class="bi bi-clock-history"></i>
-          <span><strong>We reply within 24 hours.</strong> Usually much faster on weekdays.</span>
+    <div class="container fade-up">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <div class="section-eyebrow">Our story</div>
+          <h2 class="section-title">We're not a big agency</h2>
+          <p class="section-sub">BFF Studio is a collaborative team of designers and developers who believe great websites shouldn't require a fortune. We started with a simple mission: build fast, clean, mobile-ready sites for small teams, NGOs, artists, and startups — and hand over full ownership every single time.</p>
+          <p class="section-sub mt-3">We work directly with our clients, keeping costs low and quality high. No middlemen. No locked dashboards. Just honest work at honest prices.</p>
         </div>
-
-        <!-- Alternative Contact Methods -->
-        <div class="contact-options">
-          <div class="contact-option fade-up">
-            <div class="contact-option-icon">💬</div>
-            <h4>WhatsApp</h4>
-            <p>Prefer quick chat? Message us on WhatsApp and we'll get back to you right away.</p>
-            <a href="https://wa.me/8489465176" target="_blank">Chat now <i class="bi bi-arrow-right"></i></a>
-          </div>
-
-          <div class="contact-option fade-up" style="transition-delay:.1s">
-            <div class="contact-option-icon">✉️</div>
-            <h4>Email</h4>
-            <p>Email us directly with details about your project and we'll send you a detailed response.</p>
-            <a href="mailto:webdevbff1@gmail.com">webdevbff1@gmail.com <i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <!-- Social Links -->
-        <div class="fade-up" style="transition-delay:.3s">
-          <div style="text-align:center; margin-top:4rem; padding-top:4rem; border-top:2px solid #e4f0eb;">
-            <p style="color:var(--muted); margin-bottom:1.5rem; font-size:.95rem;">Follow us for updates and web design tips</p>
-            <div class="social-links">
-              <a href="https://wa.me/8489465176" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            </div>
-          </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div style="background: var(--teal-light); border-radius: 16px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🤝</div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section>
+    <div class="container fade-up">
+      <div class="text-center mb-5">
+        <div class="section-eyebrow">What drives us</div>
+        <h2 class="section-title">Mission & Values</h2>
+      </div>
+      <div class="mission-grid">
+        <div class="mission-card fade-up">
+          <div class="label">Mission</div>
+          <div class="value">Affordable web for all</div>
+        </div>
+        <div class="mission-card fade-up" style="transition-delay:.1s">
+          <div class="label">Value</div>
+          <div class="value">Full client ownership</div>
+        </div>
+        <div class="mission-card fade-up" style="transition-delay:.2s">
+          <div class="label">Value</div>
+          <div class="value">Honest pricing</div>
+        </div>
+        <div class="mission-card fade-up" style="transition-delay:.3s">
+          <div class="label">Value</div>
+          <div class="value">Long-term support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="bg-light">
+    <div class="container fade-up">
+      <div class="text-center mb-5">
+        <div class="section-eyebrow">Meet the crew</div>
+        <h2 class="section-title">Our Team</h2>
+      </div>
+      <div class="team-grid">
+        <div class="team-member fade-up">
+          <div class="team-avatar">👨‍💻</div>
+          <h4>Dev Lead</h4>
+          <p class="role">Full-stack Developer</p>
+          <p>Builds clean, fast, scalable websites. Handles backend integrations and payment gateways.</p>
+        </div>
+        <div class="team-member fade-up" style="transition-delay:.1s">
+          <div class="team-avatar">👩‍🎨</div>
+          <h4>Design Lead</h4>
+          <p class="role">UI/UX Designer</p>
+          <p>Creates beautiful, intuitive designs. Ensures every site is mobile-first and pixel-perfect.</p>
+        </div>
+        <div class="team-member fade-up" style="transition-delay:.2s">
+          <div class="team-avatar">👨‍💼</div>
+          <h4>Client Success</h4>
+          <p class="role">Project Manager</p>
+          <p>Keeps projects on track and clients happy. Your main point of contact from start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to work with us?</h2>
+      <a href="contact.html" class="btn-cta-white">Start your project <i class="bi bi-arrow-right"></i></a>
     </div>
   </section>
 
@@ -423,8 +491,6 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-
   </script>
 </body>
 </html>
